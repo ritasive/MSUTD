@@ -1,0 +1,13 @@
+{
+	"name" : "MSUTD",
+	"description" : "Mayhem Smash Up Tower Defense Game",
+	"authors" : [
+		"Robin Klüh",
+		"Thomas Herzog",
+		"Patrick Lusts",
+		"Nikodemus van de Zand"
+	],
+	"dependencies" : {
+		"dgame": "~>0.4.3"
+	}
+}
