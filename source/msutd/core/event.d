@@ -44,7 +44,7 @@ struct Events {
 	void set_key_up_callback(void delegate(Event.KeyboardEvent) d) {
 		key_up_callback = d;
 	}
-	void set_mouse_motion_callback(void delegate(Event.MouseMotionEvent) d) {
+	void set_mouse_motion_callback(void delegate(Event.MouseMotionEvent) d){
 		mouse_motion_callback = d;
 	}
 	void set_mouse_down_callback(void delegate(Event.MouseButtonEvent) d) {

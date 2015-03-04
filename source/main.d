@@ -17,24 +17,16 @@ int main(string[] args)
 	short x = 0;
 	short y = 0;
 	
-	Events.set_mouse_down_callback((e) {
-		down = true;
+	Events.set_mouse_motion_callback((e) {
 		x = e.x;
 		y = e.y;
 	});
-	Events.set_mouse_up_callback((e) {
-		down = false;
-	});
-	
 	Events.set_quit_callback(() => win.close());
 	
 	while (win.isOpen()) {
 		win.clear();
 		
-		auto g = down ? 1 : 0;
-		auto b = Keyboard.isPressed(Keyboard.Code.Space) ? 1 : 0;
-		
-		win.setClearColor(1, g, b);
+		win.setClearColor(1, sin(x / 1000.0).abs(), sin(y / 1000.0).abs());
 		
 		t.format("X: %d | Y: %d", x, y);
 		
